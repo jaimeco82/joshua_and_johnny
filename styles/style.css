@@ -1,0 +1,567 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Utilities */
+
+li,
+a,
+button {
+  color: black;
+  font-weight: 500;
+  font-size: 1em;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: #2a81cf;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  margin: 0px;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+
+
+nav{
+  display:flex;
+  width:100vw;
+  position:fixed;
+  top: 0;
+  z-index: 1000;
+  
+}
+.quote{
+  background: #fff;
+  width:50vw;
+  height:10vh;
+  padding: 1rem 0;
+  padding-left: 2vw;
+  text-align:left;
+  font-size: 2em;
+
+}
+.nav-list {
+  background: #fff;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 10vh;
+  width: 50vw;
+}
+.nav-item a:hover {
+  color: #ff6100;
+  transition: all 200ms ease-in;
+}
+.nav-item {
+  margin-right: 2rem;
+}
+.nav-item:first-child {
+  margin-right: auto;
+  margin-left: 2rem;
+}
+.splash {
+  display: block;
+  background: url("../img/map_green.png") no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  height: 90vh;
+}
+
+/*containers*/
+
+.content_container{
+  margin: auto;
+  display:flex;
+  flex-direction: column;
+  padding-top:10vh;
+}
+
+
+#korea_container {
+  background: url("../img/korea_bg.png") no-repeat;
+  background-size:cover;
+  padding-top:14vh;
+
+
+  
+
+}
+#japan_container{
+  background: url("../img/tokyo_bg.png") no-repeat;
+  background-size:cover;
+  padding-top:14vh;
+
+}
+
+.book {
+  width:60vw;
+  height:80vh;
+  background-color: rgba(157, 159, 161, 0.8);
+  border-style: none;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: auto;
+  padding-bottom: 2vh;
+
+  
+}
+
+.blurb{
+  padding-top:4vh;
+  padding-bottom: 4vh;
+  height: 100vh;
+  
+}
+.blurb p {
+  margin: 0px 20px;
+  padding-top: 3vh;
+}
+.blurb h3 {
+  background-color: #ff6100;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-style: none;
+  color: #333;
+  padding:3vh 0;
+}
+.blurb i {
+  color: #e3e3e3;
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+
+.book img {
+  border-radius: 15px;
+  height: 35vh;
+  width: 35vh;
+  cursor: pointer;
+}
+#lightbox {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.8);
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#lightbox img {
+  max-height: 80%;
+  max-width: 90%;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+/*author's page */
+#author{
+  background:url(../img/3.jpg);
+  background-size: cover;
+
+}
+.choices{
+  height: 100vh;
+  display:flex;
+}
+.book_c{
+  padding-top: 20vh;
+  margin: 0 auto;
+
+}
+.choices{
+  background: url(../img/transparent-seoul.png)no-repeat;
+  background-position: center;
+  background-size:cover;
+}
+.c_books{
+  filter: drop-shadow(10px 2px 4px #333);
+
+  height: 400px;
+  width:400px;
+  border-radius:50%;
+  padding: 5vh;
+  transition: transform .3s; /*animation */ 
+
+
+}
+.c_books:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+  
+}
+
+#EJpic{
+  cursor: pointer;
+  filter: drop-shadow(10px 2px 4px #333);
+  padding-top: 5vh;
+
+}
+
+
+/*small screen sizes */
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 0.8em;
+  }
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .nav-item a:hover {
+    color: #eff3f2;
+    transition: all 200ms ease-in;
+  }
+  #navi{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+
+  }
+  
+  .quote{
+    background: #e3e3e3;
+    width:100vw;
+    height:auto;
+    padding: 1rem 0;
+    padding-left: 2vw;
+    text-align:center;    
+  
+  }
+  .nav-list {
+    background: #ff6100;
+    
+    display: flex;
+    height: 6vh;
+    width: 100vw;
+    align-content:space-between;
+  }
+ 
+
+  .icon {
+    background: #ff6100;
+
+    cursor: pointer;
+    float: right;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-right: 6vw;
+    margin: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  #ham-icon {
+    float: right;
+  }
+  .nav {
+    display: none;
+  }
+
+  .splash {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 20vh;
+  }
+  #main_logo {
+    filter: drop-shadow(10px 2px 4px #333);
+    height: 50vh;
+    overflow: hidden;
+    padding-top: 4vh;
+    position: relative;
+  }
+  .j_jbanner {
+    align-items: center;
+    filter: drop-shadow(10px 2px 4px #333);
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+  #banner_logo {
+    width: 100%;
+  }
+  .sectioninfo {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+
+  }
+  
+  
+  .content_container {
+    overflow: hidden;
+    background:none;
+    padding-top:15vh;
+  }
+  
+
+  
+  
+  .book {
+    height: 100%;
+    width:90vw;
+    background-color: rgba(157, 159, 161, 0.8);
+    border-style: none;
+    border-radius: 15px;
+    overflow:visible;
+    
+  }
+  
+  
+  
+  .blurb p {
+    margin: 0px 20px;
+    padding-top: 3vh;
+  }
+  .blurb h2 {
+    background-color: #ff6100;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-style: none;
+    color: #eff3f2;
+    padding:3vh 0;
+  }
+  .blurb i {
+    color: #e3e3e3;
+    font-size: 1rem;
+    padding-top: 1rem;
+  }
+  #korea_container {
+    background:none;
+    height: auto;
+    
+  
+  }
+  #japan_container{
+    background: none;
+  }
+  
+  .book img {
+    border-radius: 15px;
+    height: 40vh;
+    width: 40vh;
+    cursor: pointer;
+  }
+  .book img {
+    border-radius: 15px;
+    height: 40vh;
+    width: 40vh;
+    cursor: pointer;
+  }
+  
+  #choices{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  #book-container{
+    padding-top:4vh;
+  }
+  .c_books{
+    filter: drop-shadow(10px 2px 4px #333);
+    height: 275px;
+    width:275px;
+    border-radius:50%;
+    padding: 2vh;
+    transition: none !important;
+  }
+  .c_books:hover{
+    cursor: pointer;
+    transform: none;
+    
+  }
+
+  /* Author */
+
+  .author_container {
+    display: block;
+    background-position: center;
+    background-size: 25%;
+    color: #f0f3f2;
+    height: 100vh;
+    padding-top: 10vh;
+    width: 100%;
+  }
+  .author_container h1 {
+    font-size: 2em;
+  }
+
+  .author_container p {
+    padding-top: 4vh;
+    font-size: 2em;
+  }
+}
+/*books */
+/*medium screen sizes */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Navigation Bar and Insipirational Quotes */
+
+  .container h1 {
+    padding-top: 30px;
+  }
+  nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+  }
+  
+  nav h1{
+    background: #eff3f2;
+    font-size: 1rem;
+    width:50vw;
+    height:10vh;
+    padding: .5em 0;
+    padding-left: 2vw;
+    text-align:left;
+    
+  
+  }
+  .nav-list {
+    background: #eff3f2;
+    padding: 1rem 0;
+    display: flex;
+    height: 10vh;
+    width: 50vw;
+  }
+  .icon {
+    float: right;
+    padding: 20px;
+  }
+
+  .top_container {
+    height: fit-content;
+  }
+
+  #main_logo {
+    filter: drop-shadow(10px 2px 4px #333);
+    height: 40vh;
+    overflow: hidden;
+    padding-top: 2vh;
+    position: relative;
+  }
+  .j_jbanner {
+    align-items: center;
+    filter: drop-shadow(10px 2px 4px #333);
+  }
+  #banner_logo {
+    width: 80vw;
+  }
+
+  /* Book Section */
+
+  /* Author */
+
+  .author_container {
+    background-position: center;
+    background-size: 25%;
+    color: #f0f3f2;
+    display: block;
+    height: 100vh;
+    padding-top: 10vh;
+    width: 100%;
+  }
+  .author_container h1 {
+    font-size: 2em;
+  }
+
+  .author_container p {
+    padding-top: 4vh;
+    font-size: 2em;
+  }
+}
+
+/*large screen sizes */
+
+@media screen and (min-width: 1025px) {
+  /* Navigation Bar and Insipirational Quotes */
+
+  #ham-icon {
+    display: none;
+  }
+
+  .icon a {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  #main_logo {
+    filter: drop-shadow(10px 2px 4px #333);
+    padding-top: 8vh;
+    overflow: hidden;
+    position: relative;
+  }
+  .j_jbanner {
+    align-items: center;
+    filter: drop-shadow(10px 2px 4px #333);
+    margin: auto;
+    width: 80vw;
+  }
+
+  /* Book Section */
+
+  .sectioninfo {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .book_covers {
+    height: 40vh;
+  }
+  
+
+  .japan_container {
+    background: url("../img/ocean.png") no-repeat;
+    background-position: bottom;
+    display: block;
+    font-size: 1.5em;
+    padding-top: 10vh;
+    width: 100vw;
+  }
+
+  .japan_container h2 {
+    padding-top: 4vh;
+  }
+
+  /* Author */
+
+  .author_container {
+    background-position: center;
+    background-size: 25%;
+    color: #f0f3f2;
+    display: block;
+    height: 100vh;
+    padding-top: 10vh;
+    width: 100%;
+  }
+  .author_container h1 {
+    font-size: 2em;
+  }
+
+  .author_container p {
+    font-size: 2em;
+    padding-top: 4vh;
+  }
+}

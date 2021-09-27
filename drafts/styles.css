@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  background: #2a81cf;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+}
+
+p {
+  font-weight: 300;
+  text-align: left;
+}
+
+li,
+a,
+button {
+  font-weight: 500;
+  text-decoration: none;
+  color: #2a81cf;
+  list-style: none;
+}
+h2 {
+  color: #CF7B01;
+  font-weight: 500;
+  font-size: 2em;
+}
+
+a:hover {
+  background: #ff4200;
+  color: #fccb00;
+}
+
+/* header and navbar*/
+
+header {
+  display: none;
+}
+#quotes {
+  display: none;
+}
+.top-nav {
+  display: none;
+}
+/* Small Screens */
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    align-items: center;
+    justify-content: center;
+  }
+  #main_logo {
+    overflow: hidden;
+    height: 50vh;
+    width: 50vh;
+    padding-top: 5vh;
+    filter: drop-shadow(10px 2px 4px #333);
+  }
+  #banner_logo {
+    overflow: hidden;
+    filter: drop-shadow(10px 2px 4px #333);
+
+    margin-top: 0px;
+    height: auto;
+    width: 75%;
+    padding-bottom: 20px;
+  }
+
+  /* quotes */
+  #quotes {
+    background: #fff;
+    color: #000;
+    display: flex;
+    height: 6vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  #quotes h2 {
+    overflow: hidden;
+  }
+  /* navigation */
+
+  .top-nav {
+    display: flex;
+    justify-content: center;
+  }
+  .top-nav ul {
+    list-style: none;
+  }
+  .top-nav ul li a {
+    text-align: center;
+    text-decoration: none;
+    padding-right: 30px;
+    padding-top: 20px;
+  }
+
+  /* book_info */
+  .news {
+    background: #6aa63f;
+
+    position: relative;
+    height: 100%;
+  }
+
+  .books {
+    padding-top: 10vh;
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .top_container {
+    background: #75c3f6;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  header {
+    display: flex;
+    margin-top: 10vh;
+    min-height: 25vh;
+    max-height: 30vh;
+    background: url("../img/plane-banner.png") right no-repeat;
+    background-size: contain;
+    border-top-right-radius: 10px;
+  }
+  .logo_container {
+    width: 20vw;
+  }
+  #main_logo {
+    overflow: hidden;
+    padding-bottom: 2vh;
+    height: 40vh;
+    width: 40vh;
+    filter: drop-shadow(10px 2px 4px #333);
+    position: relative;
+  }
+  .j_jbanner {
+    width: 80vw;
+  }
+
+  #banner_logo {
+    overflow: hidden;
+    filter: drop-shadow(10px 2px 4px #333);
+
+    margin-top: 10vh;
+    height: auto;
+    width: 95vh;
+    padding-bottom: 20px;
+    padding-right: 8vh;
+  }
+
+  /* Navigation and Encouragement */
+
+  .nav_container {
+    margin: auto;
+    display: flex;
+    width: 80vw;
+    height: auto;
+    overflow: hidden;
+    background: #f0f3f2;
+  }
+  .quotes {
+    width: 50%;
+    line-height: 7vh;
+    margin-left: 5vw;
+  }
+  navbar {
+    width: 50%;
+    background: #fccb00;
+  }
+  navbar ul li {
+    display: inline-flex;
+    text-align: center;
+    float: left;
+  }
+  navbar ul li a {
+    text-align: center;
+    vertical-align: middle;
+    padding: 2.25vh 1.25vw;
+  }
+
+  /* Landing Page */
+  .contents {
+    display: flex;
+    background: #b0cf71;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+    height: 90vh;
+  }
+  
+
+  .news img {
+    height: 20vh;
+    width: 20vh;
+    border-radius: 15%;
+  }
+  .box_1 {
+    background: rgba(300, 90, 0, .5);
+    display: inline-flex;
+    
+    height: 30vh;
+    width: 70vw;
+    margin-top: 10vh;
+  }
+  
+  
+  /* .box_2 {
+    display: inline-flex;
+    height: 100vh;
+    padding: 10vh 10vh;
+  } */
+}

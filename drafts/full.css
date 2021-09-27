@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;900&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+  }
+  li,
+  a,
+  button {
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    list-style: none;
+  }
+  
+  body {
+    background: #2a81cf;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+  }
+ /* Navigation Bar and Insipirational Quotes */
+  .nav_container{
+    display: flex;
+    height: 5.75vh;
+    background:#f0f3f2;
+    padding-top: 1vh;
+   
+  }
+  
+  
+
+
+  .quotes{
+    display: flex;
+    padding-left: 6vw;
+    width: 50%;
+    
+  }
+  #navlogo{
+    padding-bottom: .5vh;
+    height: 5vh;
+  }
+  navbar{
+    width: 50%;
+    overflow: hidden;
+   
+  }
+  
+  navbar ul li a{
+    float: left;
+    text-align: center;
+    padding: 1.05vh 4vh;
+    
+  }
+
+  .top_container{
+    background: url('../img/map.png')no-repeat   ;
+    background-size: cover;
+    height: 95vh;
+    background-position-x: center;
+    overflow: hidden;
+  }
+  #main_logo {
+    padding-top:8vh;
+    overflow: hidden;
+    filter: drop-shadow(10px 2px 4px #333);
+    position: relative;
+  }
+  .j_jbanner {
+    width: 80vw;
+    align-items: center;
+    margin: auto;
+    filter: drop-shadow(10px 2px 4px #333);
+
+  }
+
+ /* Book Section */
+
+ .sectioninfo{
+   display: flex;
+   height: 100vh;
+   overflow: hidden;
+ }
+ .book_covers{
+   height: 40vh;
+ }
+ .ink_container{
+   height: 100vh;
+   background:url('../img/korea.png')no-repeat;
+   background-size: cover;
+   padding-top: 10vh;
+ }
+
+
+ .ink_container p{
+   float: left;
+   padding:4% 10%;
+   text-align: center;
+   color: #EFF3F2;
+ }
+
+ .japan_container{
+   display: block;
+   width: 100vw;
+   background:url('../img/ocean.png')no-repeat;
+   background-position: bottom;
+ }
+ 
+
+ /* Author */
+ 
+.author_container{
+  display: block;
+  background-position: center;
+  background-size: 25%;
+  height: 100vh;
+  width: 100%;
+  border: red 1px solid;
+  color: #f0f3f2;
+  padding-top: 10vh;
+
+}
+.author_container h1{
+  font-size: 4em;
+}
+
+.author_container p{
+  padding-top: 4vh;
+  font-size: 2em;
+}
+
