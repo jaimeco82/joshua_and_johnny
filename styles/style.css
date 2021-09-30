@@ -27,7 +27,14 @@ body {
   overflow-x: hidden;
 }
 
+.content_container{
+  margin: auto;
+  display:flex;
+  flex-direction: column;
+  padding-top:10vh;
+}
 
+/*navigation bar */
 
 nav{
   display:flex;
@@ -37,11 +44,12 @@ nav{
   z-index: 1000;
   
 }
+
 .quote{
   background: #fff;
   width:50vw;
   height:10vh;
-  padding: 1rem 0;
+  padding: 2rem 0;
   padding-left: 2vw;
   text-align:left;
   font-size: 2em;
@@ -56,6 +64,10 @@ nav{
   height: 10vh;
   width: 50vw;
 }
+.nav-list li{
+  padding-right: 5vw;
+}
+
 .nav-item a:hover {
   color: #ff6100;
   transition: all 200ms ease-in;
@@ -67,24 +79,22 @@ nav{
   margin-right: auto;
   margin-left: 2rem;
 }
+
+/*Index Page */
+
 .splash {
   display: block;
   background: url("../img/map_green.png") no-repeat;
   background-size: cover;
   background-position-x: center;
   height: 90vh;
-}
-
-/*containers*/
-
-.content_container{
-  margin: auto;
-  display:flex;
-  flex-direction: column;
-  padding-top:10vh;
+  padding-top: 15vh;
 }
 
 
+
+
+/* book section container*/
 #korea_container {
   background: url("../img/korea_bg.png") no-repeat;
   background-size:cover;
@@ -110,20 +120,18 @@ nav{
   overflow: hidden;
   margin: auto;
   padding-bottom: 2vh;
-
   
 }
-
+.book p {
+  padding: 4vh 2vw;
+}
 .blurb{
   padding-top:4vh;
   padding-bottom: 4vh;
   height: 100vh;
   
 }
-.blurb p {
-  margin: 0px 20px;
-  padding-top: 3vh;
-}
+
 .blurb h3 {
   background-color: #ff6100;
   border-top-left-radius: 15px;
@@ -145,6 +153,9 @@ nav{
   width: 35vh;
   cursor: pointer;
 }
+
+/* light box in book section */
+
 #lightbox {
   position: fixed;
   z-index: 100;
@@ -166,7 +177,21 @@ nav{
   border-radius: 15px;
   padding: 10px;
 }
-
+/* Book Buttons */
+i.fas {
+  padding: 2vh 5vw;
+  color: #333;
+}
+i.fas:hover{
+  color:#ff6100;
+}
+i.fab {
+  padding: 0 5vw;
+  color: #333;
+}
+i.fab:hover{
+  color:#ff6100;
+}
 /*author's page */
 #author{
   background:url(../img/3.jpg);
@@ -205,12 +230,17 @@ nav{
 }
 
 #EJpic{
-  cursor: pointer;
+  cursor: none;
   filter: drop-shadow(10px 2px 4px #333);
-  padding-top: 5vh;
+  border-radius: 15px;
+  margin-top: 1vh;
+  flex-direction:row;
 
 }
 
+@media screen and (min width:481){
+  
+}
 
 /*small screen sizes */
 
@@ -251,7 +281,9 @@ nav{
     width: 100vw;
     align-content:space-between;
   }
- 
+  .nav-list li{
+    padding-right: 5vw;
+  }
 
   .icon {
     background: #ff6100;
@@ -278,7 +310,7 @@ nav{
     flex-direction: column;
     height: 100vh;
     overflow: hidden;
-    padding-top: 20vh;
+    padding-top: 10vh;
   }
   #main_logo {
     filter: drop-shadow(10px 2px 4px #333);
@@ -325,11 +357,11 @@ nav{
   }
   
   
-  
-  .blurb p {
-    margin: 0px 20px;
-    padding-top: 3vh;
+  .book p{
+    padding-top:1vh;
+    margin: 0 20px;
   }
+  
   .blurb h2 {
     background-color: #ff6100;
     border-top-left-radius: 15px;
@@ -387,9 +419,28 @@ nav{
     transform: none;
     
   }
+  /* Book Buttons */
+i.fas {
+  display:none;
+}
+
+i.fab {
+  padding: 0 5vw;
+  color: #333;
+  font-size: 2em;
+}
+i.fab:hover{
+  color:#ff6100;
+}
 
   /* Author */
-
+#author{
+  background-image: none;
+}
+.amzlink{
+  height: 8vh;
+  
+}
   .author_container {
     display: block;
     background-position: center;
@@ -406,152 +457,221 @@ nav{
   .author_container p {
     padding-top: 4vh;
     font-size: 2em;
+  }
+  #EJpic{
+    scale: 75%;
   }
 }
 /*books */
 /*medium screen sizes */
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Navigation Bar and Insipirational Quotes */
-
-  .container h1 {
-    padding-top: 30px;
+@media screen and (min-width: 481px) and (max-width: 900px) {
+  body {
+    font-size: 0.8em;
   }
-  nav{
+  .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
+  }
+  .nav-item a:hover {
+    color: #eff3f2;
+    transition: all 200ms ease-in;
+  }
+  #navi{
+    display: flex;
+    flex-direction: column-reverse;
     align-items: center;
 
 
   }
   
-  nav h1{
-    background: #eff3f2;
-    font-size: 1rem;
-    width:50vw;
-    height:10vh;
-    padding: .5em 0;
+  .quote{
+    background: #e3e3e3;
+    width:100vw;
+    height:auto;
+    padding: 1rem 0;
     padding-left: 2vw;
-    text-align:left;
-    
+    text-align:center;    
   
   }
   .nav-list {
-    background: #eff3f2;
-    padding: 1rem 0;
+    background: #ff6100;
+    
     display: flex;
-    height: 10vh;
-    width: 50vw;
+    height: 6vh;
+    width: 100vw;
+    align-content:space-between;
   }
+  .nav-list li{
+    padding-right: 5vw;
+  }
+
   .icon {
+    background: #ff6100;
+
+    cursor: pointer;
     float: right;
-    padding: 20px;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-right: 6vw;
+    margin: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  #ham-icon {
+    float: right;
+  }
+  .nav {
+    display: none;
   }
 
-  .top_container {
-    height: fit-content;
+  .splash {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    overflow: hidden;
+    padding-top: 10vh;
   }
-
   #main_logo {
     filter: drop-shadow(10px 2px 4px #333);
-    height: 40vh;
+    height: 50vh;
     overflow: hidden;
-    padding-top: 2vh;
+    padding-top: 4vh;
     position: relative;
   }
   .j_jbanner {
     align-items: center;
     filter: drop-shadow(10px 2px 4px #333);
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
   #banner_logo {
-    width: 80vw;
-  }
-
-  /* Book Section */
-
-  /* Author */
-
-  .author_container {
-    background-position: center;
-    background-size: 25%;
-    color: #f0f3f2;
-    display: block;
-    height: 100vh;
-    padding-top: 10vh;
     width: 100%;
   }
-  .author_container h1 {
-    font-size: 2em;
-  }
-
-  .author_container p {
-    padding-top: 4vh;
-    font-size: 2em;
-  }
-}
-
-/*large screen sizes */
-
-@media screen and (min-width: 1025px) {
-  /* Navigation Bar and Insipirational Quotes */
-
-  #ham-icon {
-    display: none;
-  }
-
-  .icon a {
-    display: none;
-  }
-
-  .show {
-    display: block;
-  }
-
-  #main_logo {
-    filter: drop-shadow(10px 2px 4px #333);
-    padding-top: 8vh;
-    overflow: hidden;
-    position: relative;
-  }
-  .j_jbanner {
-    align-items: center;
-    filter: drop-shadow(10px 2px 4px #333);
-    margin: auto;
-    width: 80vw;
-  }
-
-  /* Book Section */
-
   .sectioninfo {
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+
   }
-  .book_covers {
-    height: 40vh;
+  
+  
+  .content_container {
+    overflow: hidden;
+    background:none;
+    padding-top:15vh;
+
   }
   
 
-  .japan_container {
-    background: url("../img/ocean.png") no-repeat;
-    background-position: bottom;
-    display: block;
-    font-size: 1.5em;
-    padding-top: 10vh;
-    width: 100vw;
+  
+  
+  .book {
+    min-height: 34vh;
+    max-height: 70vh;
+    width:90vw;
+    background-color: rgba(157, 159, 161, 0.8);
+    border-style: none;
+    border-radius: 15px;
+    overflow:visible;
+    display: flex;
+    margin-top: 10vh;
   }
+  
+  
+  .book p{
+    padding-top:8vh;
+    margin: 0 20px;
+  }
+  
+  /*edit book label here*/
+  .blurb h3 {
+    background-color: #ff6100;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 15px;
+    min-height: 262px;
+    border-style: none;
+    color: #eff3f2;
+    padding: 8vh 2vw;
+    vertical-align: middle;
 
-  .japan_container h2 {
-    padding-top: 4vh;
   }
+  .blurb i {
+    color: #e3e3e3;
+    font-size: 1rem;
+    padding-top: 1rem;
+  }
+  #korea_container {
+    background:none;
+    height: auto;
+
+    
+  
+  }
+  #japan_container{
+    background: none;
+  }
+  
+  .book img {
+    border-radius: 15px;
+    height: 50vh;
+    width: 50vh;
+    cursor: pointer;
+    margin-left: 4vh;
+    margin-top: 10vh;
+  }
+  
+  
+  #choices{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  #book-container{
+    padding-top:10vh;
+  }
+  .c_books{
+    filter: drop-shadow(10px 2px 4px #333);
+    border-radius:50%;
+    height: 60vh;
+    width: 60vh;
+    transition: none !important;
+  }
+  .c_books:hover{
+    cursor: pointer;
+    transform: none;
+    
+  }
+  /* Book Buttons */
+i.fas {
+  display:none;
+}
+
+i.fab {
+  padding: 20vh 5vw;
+  color: #333;
+  font-size: 2em;
+}
+i.fab:hover{
+  color:#ff6100;
+}
 
   /* Author */
-
+#author{
+  background-image: none;
+}
+.amzlink{
+  height: 8vh;
+  
+}
   .author_container {
+    display: block;
     background-position: center;
     background-size: 25%;
     color: #f0f3f2;
-    display: block;
     height: 100vh;
     padding-top: 10vh;
     width: 100%;
@@ -561,7 +681,10 @@ nav{
   }
 
   .author_container p {
-    font-size: 2em;
     padding-top: 4vh;
+    font-size: 2em;
+  }
+  #EJpic{
+    scale: 75%;
   }
 }

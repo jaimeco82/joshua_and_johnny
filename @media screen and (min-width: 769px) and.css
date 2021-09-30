@@ -1,0 +1,154 @@
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Navigation Bar and Insipirational Quotes */
+
+  .container h1 {
+    padding-top: 30px;
+  }
+  nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+  }
+  
+  nav h1{
+    background: #eff3f2;
+    font-size: 1rem;
+    width:50vw;
+    height:10vh;
+    padding: .5em 0;
+    padding-left: 2vw;
+    text-align:left;
+    
+  
+  }
+  .nav-list {
+    background: #eff3f2;
+    padding: 1rem 0;
+    display: flex;
+    height: 10vh;
+    width: 50vw;
+  }
+  .icon {
+    float: right;
+    padding: 20px;
+  }
+
+  .top_container {
+    height: fit-content;
+  }
+
+  #main_logo {
+    filter: drop-shadow(10px 2px 4px #333);
+    height: 40vh;
+    overflow: hidden;
+    padding-top: 2vh;
+    position: relative;
+  }
+  .j_jbanner {
+    align-items: center;
+    filter: drop-shadow(10px 2px 4px #333);
+  }
+  #banner_logo {
+    width: 80vw;
+  }
+
+  /* Book Section */
+
+  /* Author */
+
+  .author_container {
+    background-position: center;
+    background-size: 25%;
+    color: #f0f3f2;
+    display: block;
+    height: 100vh;
+    padding-top: 10vh;
+    width: 100%;
+  }
+  .author_container h1 {
+    font-size: 2em;
+  }
+
+  .author_container p {
+    padding-top: 4vh;
+    font-size: 2em;
+  }
+}
+
+/*large screen sizes */
+
+@media screen and (min-width: 1025px) {
+  /* Navigation Bar and Insipirational Quotes */
+
+  #ham-icon {
+    display: none;
+  }
+
+  .icon a {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  #main_logo {
+    filter: drop-shadow(10px 2px 4px #333);
+    padding-top: 8vh;
+    overflow: hidden;
+    position: relative;
+  }
+  .j_jbanner {
+    align-items: center;
+    filter: drop-shadow(10px 2px 4px #333);
+    margin: auto;
+    width: 80vw;
+  }
+
+  /* Book Section */
+
+  .sectioninfo {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .book_covers {
+    height: 40vh;
+  }
+  
+
+  .japan_container {
+    background: url("../img/ocean.png") no-repeat;
+    background-position: bottom;
+    display: block;
+    font-size: 1.5em;
+    padding-top: 10vh;
+    width: 100vw;
+  }
+
+  .japan_container h2 {
+    padding-top: 4vh;
+  }
+
+  /* Author */
+
+  .author_container {
+    background-position: center;
+    background-size: 25%;
+    color: #f0f3f2;
+    display: block;
+    height: 100vh;
+    padding-top: 10vh;
+    width: 100%;
+  }
+  .author_container h1 {
+    font-size: 2em;
+  }
+
+  .author_container p {
+    font-size: 2em;
+    padding-top: 4vh;
+  }
+}
